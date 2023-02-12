@@ -1,1 +1,0 @@
-echo # pik-imj-difA

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>生字本</title>
+    <link type="text/css" href="../styles/zt.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="left-setting">
+        <div class="setting-panel">
+            <div class="setting-item logo">
+                <a href="/" title="百加工作台 - 首页"><img src="/logo.png" width="168" height="48" alt="百加工作台"></a>
+            </div>
+            <div class="setting-item">
+                <label>字帖：</label>
+                <label>生字</label>
+                <a href="/zt/w/">词语</a>
+                <a href="/zt/x/">自定义</a>
+            </div>
+            <div class="setting-item">
+                <label>文字颜色</label>
+                <label><input type="radio" name="text-color" value="red">红</label>
+                <label><input type="radio" name="text-color" value="green">绿</label>
+                <label><input type="radio" name="text-color" value="black" checked>黑</label>
+            </div>
+            <div class="setting-item">
+                <label>字格颜色</label>
+                <label><input type="radio" name="grid-color" value="red">红</label>
+                <label><input type="radio" name="grid-color" value="green" checked>绿</label>
+                <label><input type="radio" name="grid-color" value="black">黑</label>
+            </div>
+            <div class="setting-item">
+                <label>纸张大小</label>
+                <select name="paper-size">
+                    <option value="A4x210x297" selected>A4 (210mm * 297mm)</option>
+                    <option value="B5x176x250">B5 (176mm * 250mm)</option>
+                    <option value="A5x148x210">A5 (148mm * 210mm)</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <button class="bt-print">打印</button>
+            </div>
+            <div class="word-bank">
+                <div class="setting-item">一年级生字（上册）</div>
+                <div class="setting-item word-bank" data-grade="1A">
+                    <ol>
+                        <li>
+                            <a href="#人">人</a>
+                            <a href="#口">口</a>
+                            <a href="#手">手</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="setting-item">一年级生字（下册）</div>
+                <div class="setting-item word-bank" data-grade="1B"></div>
+                <div class="setting-item">一年级生字（下册）</div>
+                <div class="setting-item word-bank" data-grade="6B"></div>
+            </div>
+        </div>
+
+        <div class="page-panel page-panel-on-loading">
+            <div class="loading">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="text">加载字体</div>
+            </div>
+            <!--paper-A4-portrait-->
+            <div class="page paper-A4-portrait paper-margin-normal">
+                <div id="container" class="text-black grid-red">
+                    <div class="meta-data">
+                        <div class="qr-code"></div>
+                        <div class="actions"><button class="bt-print">打印</button><a class="print-tips">﹖</a></div>
+                        <div class="print-tips-panel">
+                            注意事项：
+                            <ul>
+                                <li>勾选打印背景</li>
+                                <li>选择正确的纸张和方向</li>
+                                <li>适当调整页边距</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="word-area">
+                    <span class="first-word fill"><label></label></span><span class="fill"><label></label></span><span
+                        class="trace fill"><label></label></span><span class="trace fill"><label></label></span><span class="trace fill"><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span
+                        class="fill"><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span
+                        class="trace fill"><label></label></span><span class="trace fill"><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span
+                        class="fill"><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span
+                        class="trace fill"><label></label></span><span class="trace fill"><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span
+                        class="fill"><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span
+                        class="trace fill"><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span
+                        class="fill"><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+
+                    <span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span><span><label></label></span>
+                    </div>
+                </div>
+                <div class="fake-page"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../scripts/char-bank.js"></script>
+<script type="text/javascript" src="../scripts/zt.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script type="text/javascript" src="../scripts/qr.js"></script>
+<script type="text/javascript" src="/scripts/hm.js" defer></script>
+</html>

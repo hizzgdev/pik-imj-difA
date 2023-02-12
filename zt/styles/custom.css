@@ -1,0 +1,308 @@
+html {
+    font-size: 10px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen {
+    .paper-A4-portrait {
+        width: 210mm;
+        min-height: 297mm;
+    }
+    .paper-A5-portrait {
+        width: 148mm;
+        min-height: 210mm;
+    }
+    .paper-B5-portrait {
+        width: 176mm;
+        min-height: 250mm;
+    }
+    .paper-A4-landscape {
+        width: 297mm;
+        min-height: 210mm;
+    }
+    .paper-A5-landscape {
+        width: 210mm;
+        min-height: 148mm;
+    }
+    .paper-B5-landscape {
+        width: 250mm;
+        min-height: 176mm;
+    }
+    .paper-margin-normal {
+        padding: 25.3mm 0;
+    }
+    .paper-margin-narrow {
+        padding: 12.7mm 0;
+    }
+    .page-panel {
+        background-color: #e8e8e8;
+        padding: 0;
+    }
+    .page {
+        border: solid 1px #ccc;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+    .fake-page {
+        visibility: hidden;
+    }
+    .left-setting .setting-panel {
+        float: left;
+    }
+    .left-setting .page-panel {
+        margin: 0 0 0 320px;
+    }
+    .right-setting .setting-panel {
+        float: right;
+    }
+    .right-setting .page-panel {
+        margin: 0 320px 0 0;
+    }
+    .setting-panel {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 0;
+        width: 320px;
+    }
+    .setting-panel .setting-item {
+        width: 92%;
+        margin: 15px auto;
+    }
+    .setting-panel textarea {
+        display: block;
+        font-size: 1.8rem;
+        min-height: 300px;
+        width: 96%;
+        margin: 0 auto;
+    }
+    .setting-panel .logo {
+        margin-bottom: 40px;
+    }
+    .setting-panel a{
+        color: blue;
+    }
+    .setting-panel button {
+        font-size: 1.6rem;
+    }
+    .setting-panel .bt-preview {
+        display: none;
+    }
+    .setting-panel .bt-print {
+        display: block;
+    }
+    .page-panel-on-loading .page {
+        display: none;
+    }
+    .page-panel-on-loading .loading {
+        display: block;
+    }
+    .loading {
+        display: none;
+        margin: 0 auto;
+        width: 160px;
+        min-height: 210mm;
+    }
+    .loading .text {
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        opacity: 1;
+        animation: fade 2.4s infinite ease-out;
+    }
+    @keyframes fade {
+        50% {
+            opacity: 0.1;
+        }
+    }
+    .loading .bubble {
+        width: 16px;
+        height: 16px;
+        background-color: rgb(60, 144, 201);
+        float: left;
+        margin-top: 100px;
+        margin-right: 16px;
+        border-radius: 50% 50% 50% 50%;
+        transform: scale(1);
+        animation: bulge 1.6s infinite;
+    }
+    .loading .bubble:nth-child(1) {
+        animation-delay: 0s;
+    }
+    .loading .bubble:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .loading .bubble:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    .loading .bubble:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+    .loading .bubble:nth-child(5) {
+        animation-delay: 0.8s;
+    }
+    @keyframes bulge {
+        50% {
+            transform: scale(0);
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .setting-panel {
+        float: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .setting-item-page-layout {
+        display: none;
+    }
+    .page-panel {
+        width: 100%;
+        height: 1px;
+        visibility: hidden;
+        overflow: scroll;
+        margin: 0 auto;
+    }
+    .setting-panel .bt-preview {
+        display: block;
+    }
+    .setting-panel .bt-print {
+        display: none;
+    }
+}
+
+@media print {
+    .setting-panel {
+        display: none;
+    }
+    .page-panel {
+        margin: 0;
+        padding: 0;
+    }
+    .loading {
+        display: none;
+    }
+    .page {
+        border: none;
+        margin: 0;
+        min-height: 0;
+    }
+    .fake-page {
+        display: none;
+    }
+    .bt-print,
+    .print-tips,
+    .print-tips-panel {
+        display: none;
+    }
+}
+
+.meta-data {
+    font-size: 2em;
+    line-height: 1.2;
+    height:100px;
+    right: 100px;
+}
+
+.meta-data .qr-code{
+    width: 90px;
+    height: 90px;
+    float:right;
+    margin:auto;
+    margin-right:90px;
+}
+
+.meta-data .actions{
+    width: 100px;
+    float:right;
+    text-align: left;
+}
+
+.meta-data .print-tips {
+    cursor: help;
+}
+
+.meta-data .print-tips-panel {
+    position: absolute;
+    display: none;
+    padding: 20px 40px 0 20px;
+    border: 1px solid #1c1c1c;
+    background-color: #fdffca;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+.hidden {
+    display: none;
+}
+
+.page span {
+    margin: 0 -2px -2px 0;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    width: 1em;
+    height: 1em;
+    padding: 0.1em 0.1em 0.1em 0.1em;
+    vertical-align: text-bottom;
+    display: inline-block;
+}
+
+.page span {
+    margin: 0 -2px -2px 0;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    width: 1em;
+    height: 1em;
+    padding: 0.1em 0.1em 0.1em 0.1em;
+    vertical-align: text-bottom;
+    display: inline-block;
+}
+
+.text-red span {
+    color: red;
+}
+
+.text-green span {
+    color: green;
+}
+
+.text-black span {
+    color: black;
+}
+
+.text-opacity-40 label {
+    opacity: 0.4;
+}
+
+.grid-red span {
+    border-color: red;
+    background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="201" height="201"><line x1="101" y1="0" x2="101" y2="201" stroke="red" stroke-dasharray="4,4" /><line x1="0" y1="101" x2="201" y2="101" stroke="red" stroke-dasharray="4,4" /></svg>') no-repeat center center;
+}
+
+.grid-green span {
+    border-color: green;
+    background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="201" height="201"><line x1="101" y1="0" x2="101" y2="201" stroke="green" stroke-dasharray="4,4" /><line x1="0" y1="101" x2="201" y2="101" stroke="green" stroke-dasharray="4,4" /></svg>') no-repeat center center;
+}
+
+.grid-black span {
+    border-color: black;
+    background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="201" height="201"><line x1="101" y1="0" x2="101" y2="201" stroke="black" stroke-dasharray="4,4" /><line x1="0" y1="101" x2="201" y2="101" stroke="black" stroke-dasharray="4,4" /></svg>') no-repeat center center;
+}

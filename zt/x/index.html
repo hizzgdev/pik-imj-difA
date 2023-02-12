@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>田格本</title>
+    <link type="text/css" href="../styles/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="left-setting">
+        <div class="setting-panel">
+            <div class="setting-item logo">
+                <a href="/" title="百加工作台 - 首页"><img src="/logo.png" width="168" height="48" alt="百加工作台"></a>
+            </div>
+            <div class="setting-item">
+                <label>字帖：</label>
+                <a href="/zt/c/">生字</a>
+                <a href="/zt/w/">词语</a>
+                <label>自定义</label>
+            </div>
+            <div class="setting-item setting-item-page-layout hidden">
+                <label><input type="radio" name="page-layout" value="left-setting" checked>设置区域居左</label>
+                <label><input type="radio" name="page-layout" value="right-setting">设置区域居右</label>
+            </div>
+            <div class="setting-item">
+<textarea id="text">
+   池上
+ 唐  白居易
+
+ 小娃撑小艇，
+
+ 偷采白莲回。
+
+ 不解藏踪迹，
+
+ 浮萍一道开。
+
+</textarea>
+            </div>
+            <div class="setting-item">
+                <label>文字大小</label>
+                <input type="range" name="text-size" min="40" max="100" step="4" value="60" />
+            </div>
+            <div class="setting-item">
+                <label>文字颜色</label>
+                <label><input type="radio" name="text-color" value="red">红</label>
+                <label><input type="radio" name="text-color" value="green">绿</label>
+                <label><input type="radio" name="text-color" value="black" checked>黑</label>
+            </div>
+            <div class="setting-item">
+                <label>字格颜色</label>
+                <label><input type="radio" name="grid-color" value="red" checked>红</label>
+                <label><input type="radio" name="grid-color" value="green">绿</label>
+                <label><input type="radio" name="grid-color" value="black">黑</label>
+            </div>
+            <div class="setting-item">
+                <label>字帖类型</label>
+                <label><input type="radio" name="text-opacity" value="0" checked>临摹</label>
+                <label><input type="radio" name="text-opacity" value="40">描红</label>
+            </div>
+            <div class="setting-item">打印预览</div>
+            <div class="setting-item">
+                <label>纸张大小</label>
+                <select name="paper-size">
+                    <option value="A4x210x297" selected>A4 (210mm * 297mm)</option>
+                    <option value="B5x176x250">B5 (176mm * 250mm)</option>
+                    <option value="A5x148x210">A5 (148mm * 210mm)</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label>纸张方向</label>
+                <label><input type="radio" name="paper-orientation" value="portrait" checked>纵向</label>
+                <label><input type="radio" name="paper-orientation" value="landscape">横向</label>
+            </div>
+            <div class="setting-item">
+                <label>页面边距</label>
+                <select name="paper-margin">
+                    <option value="normalx25.3" selected>正常 (25.3mm)</option>
+                    <option value="narrowx12.7">窄 (12.7mm)</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <button class="bt-preview" disabled>正在加载字体</button>
+                <button class="bt-print">打印字帖</button>
+            </div>
+        </div>
+        <div class="page-panel page-panel-on-loading">
+            <div class="loading">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="text">加载字体</div>
+            </div>
+            <div class="page">
+                <div class="meta-data">
+                    <div class="qr-code"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAAXNSR0IArs4c6QAABGlJREFUeF7tneu2oyAMhbV9/0duO4uzhjaNJHyA2lrTX2eNKGGT6yY68zRNj2mD3+Pxeuw8z88Z5L/raeU4eS3fc7/fp+v1aj4r33+5XKbb7fYcZz13jWWnlQWAA0gGgAPgpVvfAPTMi8xDTNUzp9H5LRmJXGR9f4AJdxQAUtTEuABQBLcO/LgGksiVoqIc12oqKVpKs7Uid+tCvSgs59DzW/N4cpk+kACofVYrgHqOABDme3mnTw/gqAl7plmyAG2a1LQtyzi8CQeAKqK1+sAAsANAD2TrmlXjWrU0jcIkUKY5vioKfxOAh/SBpwFQqm5adFZj/bc0IwmOjtAlekpSU+m6pKBKtFV6fhpTo710zSo1Tctl1d/WOrXW7k4mWIDXfE26vnYaQ9MgT+YAsBHFj5MJP62BjZvhDieUPiUTLErfqoROQ+nTWjjORAyS4ScAfGzFoxssLqWs6LiSH+mN1j0ubA4Ae2B73RMAjuH3fipXqhZ0Vm+N0eO8DJ/IXLp/jYP1UY/l5oEBYH1rA8C1T+VkECH8mHeq1Ro5PcKBkLNeIm7pElmjp4eLg7QRAGkeZwlEG42oPyX+LQA08kvN5uymgfM8P7uzyA56fJrk8HR7WYlP1HygXDRpT6MmnMblnyVXpsvyuLTO/JPcoJa5uTtr1Ow8NsZLkUoa5bkQa55R+XEU3spvBYBOGkAi52kAJHxePe1cjuiJgsQ3y5l0xUKtqUc20weeAUCvNYUqRwAouMouDbQSaZq8UvOQKYFMFaTQtePKmmkSmVvdgV7fIgp/EkCvv7CU0gSAqkn7JwBc8z0REnho90LJNdQ0MN9DKX1aybjtKJ8EsNUfBYAVE66lDocCkHB7tMW3Jz3oCSK1DdCMDW1v857bnAd6Bb/lKwJA9XpTBtGLokSDicZIraEm7D3XY9SpPG/1vAwieySie5AJaR2SA6TJfi2RT8/p6s5qZVnoTnqmTSK0xQdSTaW1sGdNqD8wACy/PP6nkb9owofRwNE0wDvWLPnKWoWxVrQv+TozcI5o4JoCu7nW/ywgAFQokUAhteErAdy7vY1GaDKOtvhaz6Itxm7xcGQArUS+pqmStZHPIMm/29pBdr1nzKivbE2EdwVwTTrLU/V8jYLZpQ1GsKE1OvHJwwfrVANJWUhrVlJiecHGApASql752dzaEQC+PmOFKxEKGin5KKVPTH3LKGxp3SKIkER6KwBpo88ngkgAKL7e1pMHDgNITGhtQpWc6nkOnVoK1WiSOezy4R2yGUnYABC+E0c0oDUgjWqf3kCq6aGBAqme3HV3AL0Ko2cBperHI1RJtaG12XNBASCw/QAQmKmH42YA0s4EyyHTN5Xy/ZplsY4UetkYoIyLIbuYME1Ka5GPfgshACwcYCdwDwVglzo35oGtEbH2vnCWmR5r6jUSDnIRofcgEyifV9u0AFAh9HMaWNOAluukrrV6W9I8pH4ePVTyEmaa1O/CSPecSQSA4H9zCA10bPosJvwPESPRKDx/CQYAAAAASUVORK5CYII="></div>
+                    <div class="actions"><button class="bt-print">打印</button><a class="print-tips">﹖</a></div>
+                    <div class="print-tips-panel">
+                        注意事项：
+                        <ul>
+                            <li>勾选打印背景</li>
+                            <li>选择正确的纸张和方向</li>
+                            <li>适当调整页边距</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="word-area">
+                <div id="container" class="font-fzkai grid-red size-70"></div>
+                <div class="fake-page"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../scripts/custom.js"></script>
+<script type="text/javascript" src="/scripts/hm.js" defer></script>
+</html>

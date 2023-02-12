@@ -1,0 +1,88 @@
+.container {
+    max-width: 960px;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+}
+
+.jumbotron {
+    height: 640px;
+    background: url('ruler-scale.png') center top repeat-x, url('desktop.png') center bottom repeat-x, linear-gradient(#f0f0f0 0% , #d3d6d8 60%);
+    background-size: auto 3%, auto 30%, auto 100%;
+}
+
+.btn-primary {
+    background: #337580;
+}
+
+.navbar-light .navbar-nav {
+    background: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #337580;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #337580;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.animation-scene {
+    position: relative;
+}
+
+.animation-scene .container {
+    z-index: 10;
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    .shining-sun {
+        z-index: 1;
+        position: absolute;
+        top: 60px;
+        left: 60%;
+        transform: scale(1);
+        animation: sun-shine 3s ease infinite;
+    }
+    @keyframes sun-shine {
+        50% {
+            transform: scale(1.1);
+        }
+    }
+    .float-cloud {
+        z-index: 2;
+        position: absolute;
+        top: 120px;
+        left: 72%;
+        opacity: 0;
+        animation: cloud-walk 30s linear infinite;
+    }
+    @keyframes cloud-walk {
+        0% {
+            opacity: 0;
+            left: 72%;
+        }
+        15% {
+            opacity: 1;
+        }
+        85% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            left: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .float-cloud, .shining-sun {
+        display: none;
+    }
+}
